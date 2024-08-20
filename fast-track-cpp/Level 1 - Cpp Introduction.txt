@@ -1,1 +1,70 @@
-Hello World
+Q1: Hello World!
+* What is c++?
+C++ is
+     -- an object-oriented programming language
+     -- it was developed by Bjarne Stroustrup
+     -- it is an extension of C programming language
+     -- it is intermediate-level language as it comprises both high-level and low-level language feature
+
+* #include<iostream>
+  Here # sign is used to signify the starting of preprocessor command, #include is a preprocessor commands, and this is used to include all the code which will be      written inside the file included inside the angle brackets <> into the source code.
+
+* using namespace std;
+ we write "using namespace std" at the starting of the code because, there is c++ standard library which included the working of common functions and classes like "cout"
+"cin", "string" etc..., if we do not include "using namespace std" at the starting of the code then whenever we write these name like "cout", "cin", "string" we need to write std:: before those name, so to  avoid this repetition of writing std::, we write "using namespace std" at the starting of the code.
+
+* main() function is called by the operating system whenever the program is executed.
+
+
+Q2: Variable and Types
+ *Data Types
+  Int-4 bytes
+  Long-8 bytes
+  Char-1 byte
+  Boolean-1 byte
+  Float-4 bytes
+  Double-8 bytes
+
+*If we want to print the float or double type value, and we want specific number of decimal places then we need to use:
+#include<iomanip>
+cout<< fixed << setprecision(3) << varaible_name << endl;
+
+*Varible: Variable are container to hold data
+
+Q3: Type Conversion
+   Type conversion means we convert the data type of a value to another data type.
+   There are two types of type conversion:
+   i) Implicit conversion ------------> apne ap type conversion ho jata hai
+   ii) Explicit conversion ------------> hum explicitely batate hai ki konse data type mai type conversion krna hai
+
+
+Q4: Math Library
+c++ math library can be accessed using #include<cmath>
+--> Square root ---> sqrt(val)
+-->Powers----> pow(val, 2)
+-->Trigonometry --> sin(val) cos(val) tan(val)
+
+Q5) File Handling
+ Files are used to store data in a storage device permanently
+ofstream: stream class to write on files
+ifstream: stream class to write from files
+fstream : stream class to write from/to files
+
+
+Default Open Modes:
+ifstream   ios::in
+ofstream   ios::out
+fstream    ios::in | ios out
+
+
+Q6) Random Numbers
+    we can generate random number using the function rand();
+
+
+
+
+
+
+
+
+
