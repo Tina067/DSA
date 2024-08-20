@@ -1,0 +1,100 @@
+Q1: Comparison Operation & If-else
+    Comparison Operation: Comparison Operator are used to compare two values. The return value of comparison operator are either 0 or 1 i.e(True or False)
+    Operator          Name                         Example      Return Value
+    ==                Equal to                     5==6          False
+    !=                Not Equal                    5!=6          True
+    >                 Greater Than                 5>6           False
+    <                 Less Than                    5<6           True
+    >=                Greater than or equal to     5>=6          False
+    <=                Less than or equal to        5<=6          True
+
+
+   Logical Operators:
+   Operator           Name                Description                 Example              Return Value
+   &&                Logical and         Returns true if both         1<2 && 2<3             True
+                                         statements are true    
+   ||                Logical or          Returns true if anyone       1>2 && 2<3             True
+                                         of the statements are true  
+   !                 Logical not         Reverse the result           !True                  False
+
+
+  Conditional Statements:
+  The two general types are: 
+  i) if...else
+  ii) Switch...Case
+
+  i) There are three forms of if...else statements in c++
+      1) if statement
+         if(num%2==0)
+         cout<<"The given number is even";
+
+      2) if...else statement
+         if(num%2==0)
+         cout<<"The given number is even";
+         else
+         cout<<"The given number is odd"
+
+      3) if...else if ...else statement
+         if(num%2==0)
+         cout<<"The given number is even";
+         else if(num%2==1)
+         cout<<"The given number is odd";
+         else
+         cout<<"Enter a valid number";
+
+
+
+Q2) Switch Statement
+The switch statement allows us to execute a block of code among many alternatives:
+switch(expression){ -----------> The expression is evaluated and then compared with the values of each case label
+case 1: 
+//Line of code
+break;
+
+case 2: 
+//Line of code
+break;
+
+case 3:
+//Line of code
+break;
+
+default:
+//Line of code
+
+}
+
+Q3) Conditional or Ternary Expression
+    (condition) ? expressionIfTrue : expressionIfFalse
+    The first expression will be evaluated if the condition is true, and the second expression will be evaluated of the condition is false
+
+
+Q4) Loops
+    Loops are used to repeat a block of code again and again
+    There are three types of loop:
+    i) for loop
+    ii) while loop
+    iii) do...while loop
+
+    i) for loop
+       for(initialization; condition; updation) {
+       // block of code
+       }
+
+   ii)  while loop ------> if the condition is true then only the control will go inside while block
+      while(condition){
+      //block of code
+      }
+
+   iii) do while loop----> In do while loop the code will run atleast once and then the conditions will be checked and based on that the code will execute
+        do {
+         //block of code
+        }while(condition)
+
+Q5) Jump Statements
+  Jump statements are used to interrupt the normal flow of the program.
+  There are three types of Jump Statements:
+  -->break ---------> break statement is used to come out of the loop
+  -->continue-------->when compiler finds continue statement, compiler will skip all the following statements in the loop and resume the loop
+  -->goto  ----------> goto statement is used to jump from one point to another point
+
