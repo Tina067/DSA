@@ -1,0 +1,129 @@
+Q1) Function - Basic
+    * Function: Function is a block of code which runs only when we call it. We can define the function once and call it as many times as we want
+
+    * Needs of Function:
+    i) Functions help us in reducing code redundancy. If same functionality is need to be performed at multiple places then we don't have to write the same code again and again. we can create a function and use that function at multiple places.
+    ii) Functions make code modular.
+    iii) Functions provide abstraction.
+
+    * Function Declaration: Function Declaration tells about the number of parameters, types of parameter and the return type of function.
+    For example:        int func(int, int);--> ending semicolon      
+                         |        |     
+                  return type  Parameter
+                               type
+    * Function Definition: Function Definition contains the actual code  which is executed when the function is called.
+
+    * Types of Function: 
+       i) User-defined function: These functions are declared and defined by the user according to the need of their own.
+       ii) Library function : These are built-in functions. The code of these functions are already written and we can just use the function according to our needs.
+
+    * Function Parameters vs Function Arguments:
+        Function Parameters: Parameters are variables that are defined inside function definition, whenever a function is called these parameter accepts the value   which are passed from the function call.
+       Function Arguments: Arguments are the actual values that are passed to the function when the function is called.
+
+ 
+
+
+   #include<bits/stdc++.h>
+   using namespace std;
+
+   void add(int,int); ----------->Function Declaration
+
+    //Function Definition
+   void add(int a, int b) ----> Parameters: a, b
+   {
+      int sum = a + b;
+      cout<<sum<<endl;
+   }
+
+
+   int main(){
+   add(4,5); --------------->Arguments: 4, 5
+   return 0;
+   }
+
+  
+  Q2) Passing Parameters
+      Two ways to pass values to Parameters:
+      Pass by Value: In this method, the arguments values are copied in the Parameters, whenever any change is made in the Parameters variable, it is not reflected in the argument variable.
+      Pass by Reference: In the method, the address of the argument variable is passed to the Parameters variable, both the varibles are pointing to the same location so if any change is made in the value it will be reflected in both places.
+
+      Default Parameters: We can provide default values to the parameter, if during function call no argument are provided then default values are used, if values are provided then the default values are replaced by actual values.
+
+      Scope: Scope refers to the region within a program where a particular variable is accessible.
+
+ Q3) Templates
+   The Keyword template is used to define function template and class template.
+   It is a way to make the class and function generalize as far as the datatype is concern.
+   There are two types of Template
+   i) Function template
+   ii) Class template
+    
+   Syntax of function template : template <class type> type func_name(type arg1, type arg2)
+                                 
+                                 template<class X>
+                                 X Big(X a, X b){
+                                 if(a>b) 
+                                   return a;
+                                 else 
+                                   return b;
+                                 }
+                                 
+
+                                int main(){
+                                 cout<<Big(4,5)<<endl;
+                                 cout<<Big(4.7, 5.7)<<endl;
+                                 return 0;
+                                 }
+
+
+
+Q4) StringStream
+    StringStream is a stream class to operate on strings.
+    Operator which are commonly used here:
+    >> : Extracts formatted data
+    << : Inserts formatted data
+    The header file for using StringStream is  #include<sstream>
+
+
+    Getline Function: getline()-----> This function is used to read a string or a line from an input stream.
+    To use getline() function we need to include <string> header.
+
+
+Q5)Strings
+   string is a datatype, to use string datatype we need to include <string>
+   
+   * String Declaration:
+     string str = "abc";
+
+   * Size:
+     int len = str.size();
+
+   * Concatenate two strings:
+     string a = "abc"
+     string b = "def"
+     string c =  a + b;
+
+   * How to access each character from string:
+     We can access each character from string by their index
+     string s = "abc"
+     char ch1 = s[0];
+     char ch2 = s[1];
+     char ch3 = s[2];
+
+   
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
