@@ -1,0 +1,78 @@
+Q1) Pointers
+    Pointer: Pointer stores the address of a variable
+
+    Declaring Pointers: 
+    we declare a pointer variable like normal variable but the name is preceded with asterisk.
+    int *ptr; -----------> ptr is pointer to an integer
+
+    Assigning Addresss to Pointers:
+    int var;
+    int *ptr;
+
+    var = 5;
+    ptr = &var;
+
+    Dereferencing Pointers:
+    Dereferencing Pointers means accessing or manipulating the value stored at the memory address that the pointer holds.
+    int val = 10;
+    int *ptr = &val;
+    int number = *ptr; -----------------> Dereferencing Pointer
+
+
+    Malloc() and Free():
+    Malloc(): Allocates a block of memory and returns a pointer to the first byte of the allocated block. The memory is uninitialized.
+    int *ptr;
+    ptr = (int*) malloc(5 * sizeof(int));
+
+    Free(): Deallocates the memory previously allocated by malloc(), making it available for other allocations.   
+    free(ptr)
+     
+    Point to be Noted:
+    int var;
+    int *varPoint;
+    varPoint = &var;
+    *varPoint = var;
+
+
+Q2) Arrays:
+    Array is a data structure which is used to store data of same data type. The data are stored in contiguous memory location.
+
+    Declaration of Array in C++:
+    data_type array_name[Size_of_array];
+
+    int arr[5];
+
+
+    Initialization of Array in c++:
+    1) int arr[5] = {1, 2, 3, 4, 5}
+
+    2) int arr[] = {1, 2, 3, 4, 5};
+
+    3) int arr[N];
+       for(int i=0; i<N; i++){
+       arr[i] = value;}
+
+
+   Access an  element in an array: 
+   arr[0], arr[1], arr[2]
+
+
+  Traverse an Array:
+  we can traverse an array using loop
+  for(int i=0; i<N; i++){
+  cout<<arr[i]<<" ";
+  }
+
+
+  Size of Array in c++:
+  int size = sizeof(arr)/sizeof(arr[0])
+
+
+Q3) Pointers to Array
+    
+    
+
+
+
+
+    
