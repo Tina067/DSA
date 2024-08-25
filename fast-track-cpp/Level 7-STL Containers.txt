@@ -1,0 +1,53 @@
+Q1) Stack and Queue
+    Stack works with : LIFO--------> Last In First Out
+    elements are inserted and extracted from one end of the container
+
+    Declaration:
+    stack<int>s; -------------->Create an empty stack of intergers
+
+   Size:
+   int size = s.size() ---------> Gives the size of stack
+
+
+   top():
+   s.top() ----------> returns a reference to the top most element of the stack
+   s.push() --------->  adding an element at the top of the stack
+   s.pop() ----------> removing element from the top of the stack
+   s.empty() -----------> tells whether the stack is empty or not
+
+
+  Queue:
+  Queue works with : FIFO--------> First In First Out
+  elements are inserted from one end and elements are removed from another end;
+  queue<int>q; ----------------> Creates an empty queue of integers
+  int size = q.size() -----------> Gives the size of queue
+  q.front() -------------> Returns the reference to the first element of the queue
+  q.back() --------------> Returns the reference to the last element of the queue
+  q.push(x) -------------> Adds the element x at the end of the queue
+  q.pop()   -------------> Remove the firest element of the queue
+  q.empty() -------------> Returns a Boolean value which tells whether the queue is empty or not
+
+
+
+Q2) Set and MultiSet
+    Set stores unique elements
+    set<int>s; ------------> Creates a set of integers
+    int length = s.size() ------------> Gives the size of the set
+    s.insert(x) ----------> Inserts an element into the set
+    s.erase(x)  -------------> Erase the element from the set
+    auto it = s.find(val) -----------> Returns the iterator to the value
+
+
+   MultiSet: 
+   Mutiset can have same value
+   ms.erase(val) –------------> Remove all instance of val from multiset
+   ms.erase(ms.find(val)) –--------> Remove only one instance of val from multiset
+   ms.count(val) --------------> Returns the number of occurrence of that number
+
+
+Q3) Priority Queue: 
+    priority_queue<int> pq; --------->max heap
+    priority_queue<int, vector<int>, greater<int> > pq;---------->min heap
+    pq.push(x)--------> push element into the heap
+    pq.top() ---------> gives the top element from the heap
+    pq.pop() ----------> removing the top element from the heap
