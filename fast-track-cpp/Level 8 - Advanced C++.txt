@@ -1,0 +1,40 @@
+Q1) Cpp Exception Handling
+    Exceptions are runtime abnormal conditions that are met during the program execution.
+    With the help of exception handling we can transfer the control from one part of the code to another part of the code.
+    It handles runtime error.
+
+    * Types of C++ Exception
+      Synchronous: These exception happens due to mistake in the input data.
+      Asynchronous: Disc failure, keyboard interrupts etc...
+
+
+     * Throw , Try, Catch
+     Throw : Whenever we encounter an exception, that exception can be thrown using "throw" Keyword.
+     Try: Inside Try block, we will put the block of codes that may throw exception.
+     Catch : Catch is a block of code, and the catch block will execute whenever an exception is thrown from the try block.
+
+
+Q2) Policy Based Data Structure:
+    There are two functions:
+
+    find_by_order()---------->value at particular index
+    Example:  
+   // value at 2nd index in sorted array
+    cout<<*X.find_by_order(2)<<endl;
+
+    order_of_key()------------> index of a particular number
+    // index of number 7 
+    cout<<X.order_of_key(6) <<endl;
+
+
+Q3) Bitset:
+    operator[]: Access bit
+    count: count bits set
+    size: Return size
+    test: Return bit value
+    any: Test if no bit is set
+    none: Test if no bit is set
+    all: Test if all bits are set
+    
+
+   
