@@ -51,3 +51,20 @@ Q3) Priority Queue:
     pq.push(x)--------> push element into the heap
     pq.top() ---------> gives the top element from the heap
     pq.pop() ----------> removing the top element from the heap
+
+
+Q4) Maps:
+    In Map values are stored in key-value pair.
+    eg: map<int, string> mp; -----------> how to declare map
+    
+    How to initialize map:
+    mp[1] = "abc"
+    mp[2] = "def"
+    mp[3] = "acd"
+
+   How to access element in map:
+   map<int,string> :: iterator it;
+   for(it = mp.begin(); it!=mp.end(); it++){
+   cout<<(*it).first << " " << (*it).second <<endl;
+   }
+    
