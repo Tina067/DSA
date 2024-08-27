@@ -1,1 +1,51 @@
-Need to study in depth.
+Q1) Structures
+    Structure in C++ are user defined data types which are used to store group of items of non-similar data types.
+    Example: 
+           struct Employee
+           {
+            string name;
+            int id[5];
+            float salary;
+           };
+
+          int main(){
+            Employee e1;
+            e1.name = "Tina"
+            e1.id = 336;
+            e1.salary = 5000;
+          }
+     * When a structure is created no memory is allocated.
+       The structure definition is only the blueprint for the creation of variable. You can imagine it as a datatype
+     
+     Structure in C++ contains two types of members:
+     Data Member: These are normal C++ variables.
+     Member Functions: These are normal C++ functions.
+
+
+Q2) Classes and Objects
+    Class:
+    A class is a user-defined datatype, which has its own data members and member functions.
+    Class in C++ are the blueprint of Object.
+    
+    Object: 
+    Object is an instance of Class.
+    Whenever a class is defined, no memory is allocated but when an instance of class is created, memory is allocated to that instance.
+
+   Access Modifiers:
+   There are 3 access specifiers in C++.
+   Public: Members declared as public can be accessed from outside the class.
+   Private: Members declared as private can only be accessed within the class itself.
+   Protected: Members declared as protected can be accessed within the class and by derived classes.
+
+
+  Member Function in C++ Classes:
+ We can define member function in 2 ways:
+ Inside class definition
+ Outside class definition---------> we have to first declare the function prototype in the class itself, then we have to use scope resolution:: operator
+
+
+ 
+
+    
+
+   
