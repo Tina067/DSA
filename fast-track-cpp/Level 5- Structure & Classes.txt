@@ -41,11 +41,28 @@ Q2) Classes and Objects
   Member Function in C++ Classes:
  We can define member function in 2 ways:
  Inside class definition
- Outside class definition---------> we have to first declare the function prototype in the class itself, then we have to use scope resolution:: operator
+ Outside class definition---------> we have to first declare the function prototype in the class itself, then we have to use scope resolution:: operator.
 
+Q3) Inheritance
+    The capability of a class to derive properties and characteristics from another class is called inheritance.
+    Base Class : inherited by child class
+    Derived Class: inherts from base class
 
- 
+    Syntax of Inheritance:
+    class derived_class_name : access specifier base_class_name{
+    // body...
+    }
+    
+    Mode of inheritance in c++:
+    Public Mode
+    Protected Mode:
+    Private Mode: 
 
+Q4) Polymorphism:
+    Polymorphism means the ability to take many forms. 
+    C++ polymorphism is divided into two types
+    Compile time polymorphism--------> Function Overloading, Operator Overloading
+    Runtime Polymorphism-------------> Virtual Functions
     
 
    
