@@ -13,6 +13,7 @@ class Solution {
             }
         };
 Time Complexity: O(n^2)
+I got LTE.
 
 Second Approach:
 class Solution {
@@ -29,3 +30,4 @@ public:
 };
 
 Time Complexity: O(n)
+This solution is submitted.

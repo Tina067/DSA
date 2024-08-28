@@ -1,1 +1,24 @@
 2. Product of Array Except Self - LeetCode
+
+First Approach:
+class Solution {
+public:
+    vector<int> productExceptSelf(vector<int>& nums) {
+        int n = nums.size();
+        vector<int>answer;
+        int product = 1;
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                if(i==j)
+                continue;
+                product = product * nums[j];
+            }
+            answer.push_back(product);
+            product = 1;
+        }
+        return answer;
+    }
+};
+
+I got TLE.
+Time Complexity: O(n^2);
