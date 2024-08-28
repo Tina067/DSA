@@ -1,0 +1,15 @@
+1. https://leetcode.com/problems/find-the-duplicate-number/
+2. Product of Array Except Self - LeetCode
+3. Spiral Matrix - LeetCode
+4. Maximum Subarray - LeetCode
+5. Set Matrix Zeroes - LeetCode
+6. Valid Sudoku - LeetCode
+7. https://leetcode.com/problems/merge-intervals/
+8. 3Sum - LeetCode
+9. Sort Colors - LeetCode
+10. Valid Palindrome - LeetCode
+11. Container With Most Water - LeetCode
+12. Reverse Vowels of a String - LeetCode
+13. K-diff Pairs in an Array - LeetCode
+
+
