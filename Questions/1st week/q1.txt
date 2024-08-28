@@ -1,1 +1,15 @@
 1. https://leetcode.com/problems/find-the-duplicate-number/
+*Naive Solution:
+
+        public:
+            int findDuplicate(vector<int>& nums) {
+                for(int i=0; i<nums.size(); i++){
+                    for(int j=i+1; j<nums.size(); j++){
+                        if(nums[i] == nums[j])
+                        return nums[i];
+                    }
+                }
+                return -1;
+            }
+        };
+Time Complexity: O(n^2)
