@@ -1,1 +1,46 @@
 5. Set Matrix Zeroes - LeetCode
+
+First Approach:
+class Solution {
+    void func(vector<vector<int>>&matrix, int row, int col){
+        int n_row = matrix.size();
+        int n_col = matrix[0].size();
+
+        //row 
+        for(int i=0; i<n_col; i++){
+            matrix[row][i] = 0;
+        }
+
+        //column
+        for(int i=0; i<n_row; i++){
+            matrix[i][col] = 0;
+        }
+    }
+public:
+    void setZeroes(vector<vector<int>>& matrix) {
+        int n_row = matrix.size();
+        int n_col = matrix[0].size();
+        vector<vector<int>> new_matrix(n_row, vector<int>(n_col, -1));
+
+        for(int i=0; i<n_row; i++){
+            for(int j=0; j<n_col; j++){
+                if(matrix[i][j] == 0)
+                func(new_matrix, i, j);
+            }
+        }
+
+        for(int i=0; i<n_row; i++){
+            for(int j=0; j<n_col; j++){
+                if(new_matrix[i][j] == -1){
+                    new_matrix[i][j] = matrix[i][j];
+                }
+            }
+        }
+
+        for(int i=0; i<n_row; i++){
+            for(int j=0; j<n_col; j++){
+                matrix[i][j] = new_matrix[i][j];
+            }
+        }
+    }
+};
