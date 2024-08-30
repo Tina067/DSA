@@ -1,0 +1,24 @@
+Q8: 3Sum - LeetCode
+First Approach:
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+       int n = nums.size();
+       vector<int>list;
+       set<vector<int>>tt;
+       for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            for(int k =j+1; k<n; k++){
+              if(nums[i] + nums[j] + nums[k] == 0){
+                list = {nums[i], nums[j], nums[k]};
+                sort(list.begin(), list.end());
+                tt.insert(list);
+              }
+            }
+        }
+       } 
+         vector<vector<int>>result(tt.begin(), tt.end());
+       return result;
+    }
+};
+Took help from youtube
