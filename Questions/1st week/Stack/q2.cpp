@@ -1,6 +1,8 @@
+// Nearest Greater element to left
 #include<bits/stdc++.h>
 using namespace std;
 
+//using stack
 // void func(vector<int>&arr){
 //     vector<int>ans;
 //     stack<int>s;
@@ -27,7 +29,7 @@ using namespace std;
 //     }
 // }
 
-
+// for loop
 void func(vector<int>&arr){
     int n = arr.size();
     vector<int>ans;
