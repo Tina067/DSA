@@ -1,0 +1,18 @@
+Q: https://leetcode.com/problems/greatest-common-divisor-of-strings/submissions/1377552859/?envType=study-plan-v2&envId=leetcode-75
+class Solution {
+    int gcd(int a, int b){
+        if(b==0)
+        return a;
+        else 
+        return gcd(b, a%b);
+    }
+public:
+    string gcdOfStrings(string str1, string str2) {
+      if(str1 + str2 != str2 + str1)
+      return "";
+      else{
+        int n = gcd(str1.length(), str2.length());
+        return str1.substr(0,n);
+      }
+    }
+};
