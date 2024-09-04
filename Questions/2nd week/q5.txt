@@ -1,5 +1,5 @@
 Q: https://leetcode.com/problems/can-place-flowers/description/?envType=study-plan-v2&envId=leetcode-75
-Wrong Code:
+Wrong Code: First Trial: 
 class Solution {
 public:
     bool canPlaceFlowers(vector<int>& flowerbed, int n) {

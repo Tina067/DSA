@@ -1,0 +1,12 @@
+Insert an element in an array at particular position
+
+bool  func(int arr[], int n, int x, int cap, int pos){
+        if(cap == n)
+        return n;
+
+        for(int i = n-1; i>pos-1 i--){
+                arr[i] = arr[i-1];
+        }
+        arr[pos - 1 ] = x;
+        return (n+1);
+}

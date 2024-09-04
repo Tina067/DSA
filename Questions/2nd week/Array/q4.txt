@@ -1,0 +1,16 @@
+ Delete an element from a particular position
+
+ int delete(int arr[], int n, int x){
+    int i;
+    for(i=0; i<n; i++){  //Find the index of that particular element
+        if(arr[i] == x)
+        break;
+    }
+    if(i == n)
+    return n;  //No element to delete
+
+    for(int j = i; j<=n-2; j++){
+        arr[j] = arr[j+1];        //Shift each element one position ahead
+    }
+    return (n-1);
+ }

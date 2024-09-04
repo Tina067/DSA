@@ -1,0 +1,23 @@
+Q:https://leetcode.com/problems/move-zeroes/?envType=study-plan-v2&envId=leetcode-75
+First Approach:
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        vector<int>ans;
+        int count=0;
+        for(auto i : nums){
+        if(i==0)
+            count++;
+        else
+        ans.push_back(i);
+        }
+        while(count>0)
+        ans.push_back(0);
+
+        for(int i=0; i<nums.size(); i++){
+            nums[i] = ans[i];
+        }
+    }
+};
+
+Second Approach:
