@@ -1,0 +1,98 @@
+Q: https://www.geeksforgeeks.org/problems/second-largest3735/1
+
+Code: Sorting
+class Solution {
+  public:
+    // Function returns the second
+    // largest elements
+    int print2largest(vector<int> &arr) {
+      sort(arr.begin(), arr.end(), greater<int>());
+      int max = arr[0];
+      for(int i=1; i<arr.size(); i++){
+          if(abs(arr[i] - max) !=0){
+              return arr[i];
+          }
+      }
+      return -1;
+    }
+};
+
+
+Code: Something wrong in the code:
+class Solution {
+  public:
+    // Function returns the second
+    // largest elements
+    int print2largest(vector<int> &arr) {
+        if(arr.size() <2)
+        return -1;
+        
+        int max = arr[0];
+        for(int i=0; i<arr.size(); i++){
+            if(arr[i]>max){
+                max = arr[i];
+            }
+        }
+        int second_max = INT_MIN ;
+        for(int i=1; i<arr.size(); i++){
+            if(arr[i]<max && arr[i]>second_max)
+            second_max = arr[i];
+        }
+        int ans = (second_max == INT_MIN)? -1 : second_max;
+        return ans;
+    }
+};
+
+
+First Correct solution:
+class Solution {
+  public:
+  int func(vector<int>&arr){
+      int max = arr[0] ;
+      for(int i=1; i<arr.size(); i++){
+          if(arr[i]> max){
+              max = arr[i];
+          }
+      }
+      return max;
+  }
+    // Function returns the second
+    // largest elements
+    int print2largest(vector<int> &arr) {
+        int largest = func(arr);
+        int res = -1;
+        for(int i=0; i<arr.size(); i++){
+            if(arr[i] != largest){
+                if(res == -1)
+                res = arr[i];
+                else if(arr[i]>res){
+                    res = arr[i];
+                }
+            }
+        }
+        return
+    }
+};
+
+
+Optimal Solution:
+class Solution {
+  public:
+    // Function returns the second
+    // largest elements
+    int print2largest(vector<int> &arr) {
+        int max = arr[0], second_max = -1;
+        for(int i=1; i<arr.size(); i++){
+            if(arr[i]>max){
+                second_max = max;
+                max = arr[i];
+            }
+            else if(arr[i]<max){
+                if(second_max == -1 || arr[i]> second_max)
+                second_max = arr[i];
+                
+            }
+        }
+        return second_max;
+    }
+};
