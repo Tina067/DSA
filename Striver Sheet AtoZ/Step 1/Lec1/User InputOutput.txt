@@ -1,0 +1,23 @@
+--> Initially it is important to grasp the big picture and build a strong foundation.
+-->Including Libraries : C++ is a versatile language and it relies on libraries to access various 
+functionalities.
+#include<iostream> ------> input and output operations
+#include<math.h> --------> allows us to use mathematical functions.
+
+--> The Generic Skeletion: It consist of two main components: Library inclusion and main function.
+#include<iostream>
+int main()
+{
+    // Your code here
+    return 0;
+}
+
+-->Output with cout: cout<<"Hey Striver!;
+--> For line break \n is more preferred than endl
+--> using namespace std: By adding "using namespace std" at the beginning of the program, we are telling
+    the compiler that we want to use all the names from the std namespace without explicitly specifying
+    std:: each time
+
+--> Taking User Input using cin
+-->#include<bits/stdc++.h> : To make the process more convenient, there is a shortcut that allows
+ to include all the standard libraries at onces using #include<bits/stdc++.h>
