@@ -1,0 +1,29 @@
+Question: https://leetcode.com/problems/rotate-array/submissions/1443986221/?envType=study-plan-v2&envId=top-interview-150
+
+Approach used:
+class Solution {
+    void swap_func(vector<int>& nums, int i, int j){
+        while(i<j){
+             int temp = nums[i];
+             nums[i] = nums[j];
+             nums[j] = temp;
+            i++; j--;
+        }
+        return;
+    }
+public:
+    void rotate(vector<int>& nums, int k) {
+        if(nums.size() == 1)
+        return;
+        int n = nums.size();
+        if(k>n){
+            while(k>n){
+                k = k-n;
+            }
+        }
+         swap_func(nums, 0, nums.size()-1);
+         swap_func(nums,0,k-1);
+         swap_func(nums,k,nums.size()-1);
+         return;
+    }
+};
