@@ -1,6 +1,6 @@
 Question: https://leetcode.com/problems/two-sum/description/
 
-Approach: 
+Approach: Brute Force Approach
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -18,3 +18,5 @@ public:
         return v;
     }
 };
+
+Time Complexity: O(n^2)
