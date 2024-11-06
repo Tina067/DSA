@@ -20,3 +20,35 @@ public:
 };
 
 Time Complexity: O(n^2)
+
+Second Approach:
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+      vector<int>ans;
+       map<int,int>mp;
+       for(int i=0; i<nums.size(); i++){
+        mp[i] = nums[i];
+       }
+       sort(nums.begin(), nums.end());
+       int low=0, high = nums.size()-1;
+       int first, second;
+       while(low < high){
+         if(nums[low]+nums[high] > target)
+         high--;
+         else if(nums[low] + nums[high] < target)
+         low++;
+         else{
+            first = nums[low];
+            second = nums[high];
+            break;
+         }
+       }
+       for(auto a : mp){
+        if(a.second == first || a.second == second){
+            ans.push_back(a.first);
+        }
+       }
+       return ans;
+    }
+};
