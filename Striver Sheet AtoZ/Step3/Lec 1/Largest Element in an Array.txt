@@ -1,0 +1,29 @@
+Question: https://www.geeksforgeeks.org/problems/largest-element-in-array4009/0?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=largest-element-in-array
+
+Approach 1:
+class Solution {
+  public:
+    int largest(vector<int> &arr) {
+        sort(arr.begin(), arr.end());
+        return arr[arr.size() - 1];
+    }
+};
+
+Time Complexity: O(nlogn)
+Space Complexity: O(1)
+
+Approach 2: 
+class Solution {
+  public:
+    int largest(vector<int> &arr) {
+       int max = arr[0];
+       for(int i=1; i<arr.size(); i++){
+           if(max < arr[i])
+           max = arr[i];
+       }
+       return max;
+    }
+};
+
+Time Complexity: O(n);
+Space Complexity: O(1);
