@@ -1,0 +1,48 @@
+Question: https://leetcode.com/problems/rotate-array/description/
+Question: rotated array
+Question Link: https://leetcode.com/problems/rotate-array/
+Approach 1: 
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        while(k>0){
+            int ele = nums.back(); nums.pop_back();
+            nums.insert(nums.begin(), ele);
+        }
+    }
+};
+
+Time Complexity: (k*n)
+Space Complexity: O(1)
+
+Approach 2: 
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+       int n = nums.size();
+       k = k%n;
+       vector<int>ans(n);
+       for(int i=0; i<n; i++){
+        ans[(i+k)%n] = nums[i];
+       } 
+       nums = ans;
+    }
+};
+
+Time Complexity: O(n);
+Space Complexity: O(n);
+
+Approach 3: 
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+       int n = nums.size();
+       k = k%n;
+       reverse(nums.begin(), nums.end());
+       reverse(nums.begin(), nums.begin()+k);
+       reverse(nums.begin() + k, nums.end()); 
+    }
+};
+
+Time Complexity: O(n)
+Space Complexity: O(1)
