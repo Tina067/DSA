@@ -1,0 +1,19 @@
+Question: https://leetcode.com/problems/move-zeroes/description/
+Approach:
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+      int count = 0;
+      vector<int>ans;
+      for(int i=0; i<nums.size(); i++){
+        if(nums[i] == 0) count++;
+        else
+        ans.push_back(nums[i]);
+      }  
+      ans.insert(ans.end(),count, 0);
+      nums = ans;
+    }
+};
+
+Time Complexity: O(n)
+Space Complexity: O(n)
