@@ -1,3 +1,4 @@
+Check if array is sorted
 Question: https://www.naukri.com/code360/problems/ninja-and-the-sorted-check_6581957?utm_source=striver&utm_medium=website&utm_campaign=codestudio_a_zcourse&leftPanelTabValue=PROBLEM
 Approach:
 int isSorted(int n, vector<int> a) {
@@ -40,3 +41,20 @@ public:
         return count<=1;
     }
 };
+
+
+Question: Check is array is sorted and rotated
+Question Link: https://leetcode.com/problems/rotate-array/
+Approach 1: 
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        while(k>0){
+            int ele = nums.back(); nums.pop_back();
+            nums.insert(nums.begin(), ele);
+        }
+    }
+};
+
+Time Complexity: (k*n)
+Space Complexity: O(1)
