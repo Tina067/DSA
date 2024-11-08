@@ -43,7 +43,7 @@ public:
 };
 
 
-Question: Check is array is sorted and rotated
+Question: rotated array
 Question Link: https://leetcode.com/problems/rotate-array/
 Approach 1: 
 class Solution {
@@ -85,6 +85,26 @@ public:
        reverse(nums.begin(), nums.end());
        reverse(nums.begin(), nums.begin()+k);
        reverse(nums.begin() + k, nums.end()); 
+    }
+};
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+Question : Check if array is sorted and rotated
+Approach: 
+class Solution {
+public:
+    bool check(vector<int>& nums) {
+       int count =0; 
+       for(int i=0; i<nums.size(); i++){
+        if(nums[i] > nums[(i+1)%nums.size()])
+        count++;
+       } 
+       if(count > 1)
+       return false;
+       else 
+       return true;
     }
 };
 
