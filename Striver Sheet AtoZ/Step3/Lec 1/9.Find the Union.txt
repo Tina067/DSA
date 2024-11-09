@@ -1,0 +1,26 @@
+Question: https://www.geeksforgeeks.org/problems/union-of-two-sorted-arrays-1587115621/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=union-of-two-sorted-arrays
+Approach: 
+class Solution {
+  public:
+    // a,b : the arrays
+    // Function to return a list containing the union of the two arrays.
+    vector<int> findUnion(vector<int> &a, vector<int> &b) {
+        // Your code here
+        // return vector with correct order of elements
+        set<int>ans;
+        vector<int>res;
+        for(auto num : a){
+            ans.insert(num);
+        }
+        for(auto num : b){
+            ans.insert(num);
+        }
+        for(auto num : ans){
+            res.push_back(num);
+        }
+        return res;
+    }
+};
+
+Time Complexity: O((n+m)log(n+m))
+Space Complexity: O(n+m)
