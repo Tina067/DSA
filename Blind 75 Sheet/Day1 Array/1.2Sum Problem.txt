@@ -24,3 +24,43 @@ public:
 
 Time complexity: O(n^2)
 Space complexity: O(1)
+
+
+Approach: Two Pointer 
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+     map<int,int>mp;
+     vector<int>ans;
+     int num1, num2;
+     bool flag = false;
+     int low = 0, high = nums.size() - 1;
+     for(int i=0; i<nums.size(); i++){
+        mp[i] = nums[i];
+     }
+     sort(nums.begin(), nums.end());
+     while(low < high){
+        if(nums[low] + nums[high] > target)
+        high--;
+        else if(nums[low] + nums[high] < target)
+        low++;
+        else{
+           num1 = nums[low];
+           num2 = nums[high];
+           flag = true;
+           break; 
+        }
+     }
+     for(auto a : mp){
+        if(a.second == num1 || a.second == num2){
+            ans.push_back(a.first);
+        }
+     }
+     if(flag == false){
+        ans.push_back(-1);
+        return ans;
+     }
+     else 
+     return ans;
+    }
+};
