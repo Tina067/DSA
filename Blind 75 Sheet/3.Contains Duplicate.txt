@@ -1,5 +1,5 @@
 Question: https://leetcode.com/problems/contains-duplicate/description/
-Approach:
+Approach 1:
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
@@ -17,7 +17,7 @@ Time Complexity: O(n^2)
 Space Complexity: O(1)
 
 
-Approach:
+Approach 2:
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
@@ -37,7 +37,7 @@ Time Complexity: O(nlogn)
 Space Complexity: O(n)
 
 
-Approach:
+Approach 3:
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
@@ -52,3 +52,21 @@ public:
 
 Time Complexity: O(nlogn)
 Space Complexity: O(1)
+
+Approach 4: 
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_set<int>ans;
+        for(auto num : nums){
+            ans.insert(num);
+        }
+        if(ans.size()< nums.size())
+        return true;
+        else
+        return false;
+    }
+}
+
+Time complexity: O(n)
+Space Complexity: O(n)
